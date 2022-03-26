@@ -12,27 +12,20 @@ class GetX extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var count = 0.obs;
+    void incriment(){
+      count++;
+    }
     return Scaffold(
-      appBar: AppBar(title: Text("GetX"),),
+      appBar: AppBar(title: Text("State Management"),),
       body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center, children: [
-
+Obx((() => Text("Count value is $count"))),
 ElevatedButton(onPressed: (){
-Get.snackbar("show snackbar", "this will be snackbar Message",
-snackPosition: SnackPosition.BOTTOM,
-//SnackPosition.BOTTOM Position & Text Color,
-// snackPosition: SnackPosition.BOTTOM,
-// titleText: Text("Another Title",style: TextStyle(color: Colors.blue),),
-// messageText: Text("Another Message",style: TextStyle(color: Colors.amber),),
-colorText: Colors.amber,
-backgroundColor: Colors.black,
-borderRadius: 30,
-margin: EdgeInsets.all(10),
-// SnackPosition BackgroundColor & BorderRadius
-);
-
-}, child: Text("Show Snackbar")),
+  incriment();
+}, child: Text("Incriment")),
       ],),),
     );
+    //Simple State Management
   }
 }
