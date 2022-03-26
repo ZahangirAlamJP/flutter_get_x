@@ -18,7 +18,12 @@ class GetX extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center, children: [
 
 ElevatedButton(onPressed: (){
-Get.snackbar("show snackbar", "this will be snackbar Message");
+Get.snackbar("show snackbar", "this will be snackbar Message",
+//SnackPosition.BOTTOM Position & Text Color
+snackPosition: SnackPosition.BOTTOM,
+titleText: Text("Another Title",style: TextStyle(color: Colors.blue),),
+messageText: Text("Another Message",style: TextStyle(color: Colors.amber),),
+);
 }, child: Text("Show Snackbar")),
       ],),),
     );
