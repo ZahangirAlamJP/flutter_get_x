@@ -19,11 +19,18 @@ class GetX extends StatelessWidget {
 
 ElevatedButton(onPressed: (){
 Get.snackbar("show snackbar", "this will be snackbar Message",
-//SnackPosition.BOTTOM Position & Text Color
 snackPosition: SnackPosition.BOTTOM,
-titleText: Text("Another Title",style: TextStyle(color: Colors.blue),),
-messageText: Text("Another Message",style: TextStyle(color: Colors.amber),),
+//SnackPosition.BOTTOM Position & Text Color,
+// snackPosition: SnackPosition.BOTTOM,
+// titleText: Text("Another Title",style: TextStyle(color: Colors.blue),),
+// messageText: Text("Another Message",style: TextStyle(color: Colors.amber),),
+colorText: Colors.amber,
+backgroundColor: Colors.black,
+borderRadius: 30,
+margin: EdgeInsets.all(10),
+// SnackPosition BackgroundColor & BorderRadius
 );
+
 }, child: Text("Show Snackbar")),
       ],),),
     );
